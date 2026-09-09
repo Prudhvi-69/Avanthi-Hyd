@@ -1,0 +1,374 @@
+int input = obj.nextInt();
+
+for( int i = 1 ; i <= input ; i++ ) // rows 
+{
+	for( int j = 1 ; j <= input ; j++ ) // columns
+	{
+		System.out.print(" * ");
+	}
+	System.out.println();
+}
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input = obj.nextInt();
+        for( int i = 1 ; i <= input ; i++ ) // rows 
+        {
+        	for( int j = 1 ; j <= input ; j++ ) // columns
+        	{
+        		System.out.print(" * ");
+        	}
+        	System.out.println();
+        }
+    }
+}
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input = obj.nextInt();
+        for( int i = 1 ; i <= input ; i++ ) // rows 
+        {
+        	for( int j = 1 ; j <= i ; j++ ) // columns
+        	{
+        		System.out.print(" O ");
+        	}
+        	System.out.println();
+        }
+    }
+}
+		
+
+
+
+
+
+
+
+
+
+
+
+
+Zero Tolerance for Mobile usage in the class for all 
+
+It will be handed over to the college management when caught 
+
+
+
+
+
+
+
+
+
+
+You should be able to understand and analyse.
+When to print a character and when to print a space.
+ 
+We need  to start building a loginc for printing characters and also a separate logic for spaces everytime. 
+
+
+Remember this and you can almost build any pattern.
+
+
+
+
+
+
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input = obj.nextInt();
+        for( int i = 1 ; i <= input ; i++ ) // rows 
+        {
+            for(int j =1 ; j<= input ; j++)
+            {
+                if( i==1 || i==input || j==1 || j==input)
+     //Including only row1, col1, row5 and col5 and everything else below
+            		System.out.print("*");
+                else
+                    System.out.print(" ");
+            }
+        	System.out.println();
+        }
+    }
+}
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input = obj.nextInt();
+        for( int i = 1 ; i <= input ; i++ ) // rows 
+        {
+            for(int j =1 ; j< (2 * (input - i)) ; j++) //spaces
+                System.out.print(" ");
+            for(int k = 1 ; k <= i ; k++)//characters printing
+                System.out.print("* ");
+        	System.out.println();
+        }
+    }
+}
+
+
+
+
+We shall await for few more minutes until all will come 
+
+
+
+
+
+
+
+
+
+
+
+input : 5 
+
+Output : 
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+
+
+
+
+
+input : 5 
+output : 
+
+*
+* * 
+* * * 
+* * * *
+* * * * *
+
+
+
+
+
+
+
+input : 5 
+output :
+
+* * * * * 
+*        *
+*        *
+*        *
+* * * * *
+
+Input : 4
+Output :
+
+			*
+		*	*
+	*	*	*
+*	*	*	*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Input : 4 
+
+Output : 
+
+A B C D 
+E        F 
+G        H
+I  J  K  L 
+
+1 2 3 4
+5       6
+7       8
+9 10 11 12
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner obj = new Scanner(System.in);
+        int input = obj.nextInt();
+        // String str = "A";
+        String Alpha = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        int p = 0;
+        for( int i = 1 ; i <= input ; i++ ) // rows 
+        {
+        	for( int j = 1 ; j <= input ; j++ ) // columns
+        	{
+        		System.out.print(Alpha.charAt(p)+" ");
+                 p++;       
+                if(p==26)
+                    p=0;
+        	}
+        	System.out.println();
+        }
+    }
+}
+// // Online Java Compiler
+// // Use this editor to write, compile and run your Java code online
+// import java.util.*;
+// class Main {
+//     public static void main(String[] args) {
+//         Scanner obj = new Scanner(System.in);
+//         int input = obj.nextInt();
+//         for( int i = 1 ; i <= input ; i++ ) // rows 
+//         {
+//             for(int j =1 ; j< (2 * (input - i)) ; j++) //spaces
+//                 System.out.print(" ");
+//             for(int k = 1 ; k < 2*i ; k++)//characters printing
+//                 System.out.print("* ");
+//         	System.out.println();
+//         }
+//         //write the hollow square code below this 
+//     }
+// }
+
+
+
+
+We shall await for few more minutes until all will come 
+
+
+
+
+
+
+
+
+
+
+
+input : 5 
+
+Output : 
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+
+
+
+
+
+input : 5 
+output : 
+
+*
+* * 
+* * * 
+* * * *
+* * * * *
+
+
+
+
+
+
+
+input : 5 
+output :
+
+* * * * * 
+*        *
+*        *
+*        *
+* * * * *
+
+Input : 4
+Output :
+
+			*
+		*	*
+	*	*	*
+*	*	*	*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

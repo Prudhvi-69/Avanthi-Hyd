@@ -1,0 +1,378 @@
+Right Shift : You can divide the value by 2 power number of shiftings.
+
+Left Shift : You can multiply the value with 2 power number of shiftings.
+
+Complement (~): 
+
+If the input is positive value; output is going to be a negative but one value more than input   : Ex: ~10 => -11 
+
+If the input is negative value; output is going to be a positive but one value lesser than the input.  	Ex: -10 => 9
+
+
+
+
+
+
+
+
+
+
+
+Write a Program to get the Output by taking the given Inputs :
+
+Input1 : 12
+Input2 : 14
+Input3 : 19
+
+Outputs : 
+
+Sum : 
+Product : 
+Average : 
+Percentage : 
+
+
+
+Format Specifiers : 
+
+character : %c
+integer : %d and %i 
+float : %f
+double : %lf 
+long int : %ld 
+
+
+4
+
+
+
+
+
+
+
+
+
+Write a Program to display your information of Name, Age, ID, Gender and CGPA by taking these in separate variables.
+
+
+
+input pi value : 3.141713
+
+output : 3.141
+
+
+full value : 				printf(" %f " , input);
+only 3 points : 		printf(" %.3f ", input); 
+
+
+
+
+
+
+int a = 11;
+int b = 44;
+
+output : 
+
+a = 44
+b = 11 
+
+
+Swapping of 2 values 
+
+1st Way : 
+	int c = b;
+	b = a;
+	a = c;
+
+2nd way 
+
+	a = a + b 
+	b = a - b 
+	a = a - b
+
+Out of all 81 people in the class today how many are good or familiar with C? 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Variables : 
+
+
+
+Declaration of a variable : 
+
+char var;
+
+Initialization of a variable : 
+
+var = 'G';
+
+
+Declaration and Initialization of a variable : 
+
+char grade = 'E'; 
+char char_grade = 'E';
+
+
+
+Declaration of variable : When declaration happens you are letting the system know that you are going to use this space for some purpose in the current program.
+
+When declaration happens, the system will assign a block of memory in the system for the usage and storing, and retrieval of the data when needed in the program.
+
+***Declaration alone can never store any value in the variable.
+
+Initialization of a variable : This make sures that the program is currently storing some value inside the variable that has been declared and assigned some space in the system.
+
+*** Every declared variable will always have something called an address to locate that variable in the system memory 
+
+
+
+
+
+
+
+
+X-OR Operation between multiple inputs (more than 2 inputs) : 
+
+0 0 0 - 0 
+0 0 1 - 1
+0 1 0 - 1
+0 1 1 - 0
+1 0 0 - 1
+1 0 1 - 0
+1 1 0 - 0 
+1 1 1 - 1
+
+
+
+
+
+
+
+
+12:07 07-09-2026 : Starting time 
+
+
+Write down all the keywords available to use in C language(all 32)
+
+
+
+
+
+
+
+
+
+
+
+
+
+Write down all the operators or we can talk about it (more like I talk about it, but you people wont be talking about it)
+
+Arithmetic 
+-----Binary : +, -, *, /, % 
+-----Unary : ++, -- 
+
+Logical Operators : 
+---- &&, ||, ! 
+
+Bitwise : 
+------ &, |, ^, ~, <<, >> 
+
+Steps to solve any bitwise operation (common for all ops) 
+
+1. Take the input 
+2. Find the operator 
+3. Convert the inputs into Binary 
+4. Perform the operation based on operator 
+5. Get the result in Binary 
+6. Convert the result into the original format of input 
+
+
+0111
+1110
+110
+
+
+1000101
+0000100
+
+
+
+
+
+
+
+
+
+
+
+
+|| 
+
+Z 		Z		F
+Z 		NZ 	T
+NZ	Z 		T
+NZ 	NZ 	T
+
+
+0110
+1001
+1111
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7&5 = 5 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7 & 14 : 6 | 
+8 | 11   : 11
+14 & 0 : 0
+0 | 75   : 75
+69 && 4 : True  
+6 | 9     : 15
+11 || -11 : True
+3 && 0 : False
+0 || 3  : True 
+0 & 6  : 0
+6 | 0 : 6
+
+
+
+
+
+69<<3  : 552 | 
+71>>1	: 35 | 
+5>>5		: 0 | 
+7>>10	: 0 | 
+9<<3		: 72 | 
+10>>10 : 0
+4<<4 		: 64
+2<<10	: 2048
+
+
+
+
+
+
+
+
+
+3rd way : 
+
+	a = a * b
+	b = a / b
+	a = a / b
+
+
+note down these and i'll think about letting you all go😁😁
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+HomeWork / HostelWork / RoomWork / FlatWork / HouseWork : 
+
+Write programs
+
+1. Take input in float Celsius and convert it into Fahreinhet temparature format.
+2. Take input in integer and add each digit in it and display the sum of digits in it. 
+
+
+
+
+
+
+
+
+
+
+
+
+
