@@ -1,0 +1,322 @@
+Link : https://github.com/Prudhvi-69/Avanthi-Hyd/tree/master
+
+LMS Platform Link : student.seedingminds.in/login 
+ 
+1. Open this platform
+2. Login with your mail ID and password is : Sdm@2026 
+3. Click on Practise on sidebar
+4. Select Java and open the Practise session.
+5. Start any Practise Test and open in Full Screen mode and start
+6. Take a photo of this and send in your class groups for access
+7. CR & GR, can you people take this photo and send in your respective groups.
+
+
+
+
+
+
+
+
+
+
+
+
+
+int n = obj.nexInt();
+int factors = 0;
+for( int i = 1 ; i <= n ; i++)  //this will run n number of times for every number
+{
+	if( n % i == 0 )
+		factors++;
+}
+if( factors == 2 )
+	System.out.println(" Prime ")
+else 
+	System.out.println("Not Prime");
+
+
+
+
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.*;
+import java.lang.Math;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    double n = obj.nextDouble();
+    int factors = 0;
+    int ss = (int)Math.sqrt(n);
+    for( int i = 2 ; i <= ss ; i++)  
+//this will run only for squareroot number of times 
+    {
+	    if( n % i == 0 )
+	    	factors++;
+    }
+    if( factors == 0 )
+	    System.out.println(" Prime ");
+    else 
+    	System.out.println("Not Prime");
+
+
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+31
+36
+35
+
+1-15
+1-18
+1-17
+
+
+
+
+
+
+
+Strings
+
+String 
+
+
+Integer : Wrapper class
+int : keyword to work with Integer
+
+int a = 9;
+Integer a = new Integer(9);
+
+long k = 4444;
+Long k = new Long(4444);
+
+String str = "AVIH";
+char first = str.charAt(0);
+
+Input functions to take String input (2 different functions) : 
+
+next() : used only when there is a need of one word without any spaces in the input. If there are any spaces in the input it is going to skip everything after the space.
+
+nextLine() : used when you want to include multiple words in the  input when taking from the user and also it will not skip any words or characters when giving multiple words as input.
+
+
+
+String : "A1V0IH2 I3S TH5E BE4ST6"
+
+Output : 1023546
+
+
+import java.util.*;
+import java.lang.Math;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    System.out.println("Input String is :"+str);
+
+    for(int i=0 ; i < str.length(); i++)
+    {
+        if( str.charAt(i) >= '0' && str.charAt(i) <= '9' )
+            System.out.print(str.charAt(i)+" ");
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+String : "Avanthi Group of Institutions, Hyderabad"
+Output : AGIH
+
+
+
+
+
+
+import java.util.*;
+import java.lang.Math;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    System.out.println("Input String is :"+str);
+//Finding all lowercase characters inside the given String
+    for(int i=0 ; i < str.length(); i++)
+    {
+        if( str.charAt(i) >= 'a' && str.charAt(i) <= 'z' )
+            System.out.print(str.charAt(i)+" ");
+    }
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ASCII : American Standard Code for Information Interchange
+
+Homework / Housework / HostelWork / RoomWork / PGWork  :
+
+1. Write down all ASCII values in your notes starting from 0 to 127 
+2. Write your name in Binary 
+3. Write down 10 built-in String functions in Java and a line about each
+
+
+
+
+
+'A' -> 65 -> 1000001 
+' ' -> 32 -> 100000
+'a' -> 97 -> 1100001
+'0' -> 48 -> 110000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import java.util.*;
+import java.lang.Math;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    System.out.println("Input String is :"+str);
+//Finding all lowercase characters inside the given String
+    for(int i=0 ; i < str.length(); i++)
+    {
+        if( str.charAt(i) >= 'a' && str.charAt(i) <= 'z' )
+            System.out.print(str.charAt(i)+" ");
+    }
+}
+}
+
+
+
+
+
+String : "Avanthi College 501512, est. 2005"
+Output : Avanthi College est
+
+
+import java.util.*;
+import java.lang.Math;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    System.out.println("Input String is :"+str);
+//Finding only uppercase and lowercase characters 
+    for(int i=0 ; i < str.length(); i++)
+    {
+        if( (str.charAt(i) >= 'A' && str.charAt(i) <= 'Z' ) || 
+            (str.charAt(i) >= 'a' && str.charAt(i) <= 'z' )|| 
+            (str.charAt(i)==' '))
+            System.out.print(str.charAt(i));
+    }
+
+
+
+
+
+
+
+
+
+
+String : "This is Best"
+Output : "tseB si sihT"
+
+
+
+import java.util.*;
+class Day4 {
+    public static void main(String[] args) {
+    Scanner obj = new Scanner(System.in);
+    String str = obj.nextLine();
+    System.out.println("Input String is :"+str);
+//Reverse the given String Input 
+    for(int i= str.length()-1 ; i >= 0 ; i--)
+    {
+        System.out.print(str.charAt(i));
+    }
+}
+}
+
+
+
+
+
+//Counting total number of Words in a String
+
+
+String : "Avanthi College is the Best"
+Output : 5 
+
+String : "We are Best"
+Output : 3
+
+https://github.com/Prudhvi-69/Avanthi-Hyd
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
