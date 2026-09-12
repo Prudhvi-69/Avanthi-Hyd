@@ -1,0 +1,274 @@
+import java.util.*;
+class Stack{
+    int top = -1;  //Default top pointing below the Stack
+    int size = 6;  //Static size of the Stack 
+    int Stack[] = new int[size]; //Static Stack declaration
+    void push(int val){//FUnction to insert values into Stack
+        if(top == size-1)//Checking if Stack is Full
+            System.out.println("\nStack Overflow...🥲");
+        else//do not write this👆 (x:) and also this line
+        {
+            top++; //Increment top, then push value
+            Stack[top] = val; 
+            System.out.println("\n new value pushed into stack : "+val);
+        }    
+    }
+    void pop()//Pop function to delete the top most element
+    {
+        if(top == -1)//Checking before deleting if empty
+            System.out.println("\nStack Underflow..😔");
+        else{
+            System.out.println("\nelement removed from the Stack is : "+Stack[top]);
+            top--; // If not empty, moving top to bottom 
+        }
+    }
+    void peek() //function to see the top most element
+    {
+        if(top == -1) //Checking if it is  empty
+            System.out.println("\nStack is Empty. Nothing to see.😔");
+        else
+             System.out.println("\nTop Element in Stack is : "+Stack[top]);
+    }
+    void display()
+    {
+        if(top == -1) //Checking if it is  empty
+            System.out.println("\nStack is Empty. Nothing to see.😔");
+        else{
+            System.out.println("\nStack values are : ");
+            for(int i = top ; i >= 0 ; i--) //Display from top to bottom
+            {    
+                System.out.println("|.."+Stack[top]+"..|"); // Access each top value
+                top--; //To see the next element, we should delete currrent one
+            }
+
+        }
+    } 
+    void isFull()
+    {
+        if(top == size-1)
+            System.out.println("\nStack is Full Currently...");
+        else
+            System.out.println("\nStack is not at Full Capacity right now...");                
+    }
+    void isEmpty()
+    {
+        if(top == size-1)
+            System.out.println("\nStack is Empty Currently.....");
+        else
+            System.out.println("\nStack is not Empty right now...");
+    }
+}
+public class Day5 {
+    public static void main(String avanthiIsGreat[])
+    {
+        Stack s = new Stack();
+        s.push(55);
+        s.push(71);
+        s.push(69);
+        s.isFull();
+        s.push(83);
+        s.pop();
+        s.display();
+        s.isEmpty();
+        s.push(836);
+        s.push(927);
+        s.push(386);
+        s.push(699);
+        s.display();
+    }
+}
+
+
+
+Scenario Based Question : 
+
+Consider we are going to a Library, in that library we are given a Book Container when we are going to select the books from the shelves and keep them on top of each other inside our Book Container in serial order. 
+We are going to write the Book names and also their order of keeping them inside the Book Container. 
+
+Our task is to, show this entire scenario as a Program written in Java, and show all things that we are going to do inside the Library. 
+
+Things to show in the output : 
+-> Insertion of Books into the Container 
+-> Removal of Books from the Container
+-> Showing all Books from the Container
+-> Check if the Container is full or not and empty or not in the middle after taking 3 Books
+-> Show the Book on top of the Container to the Librarian. 
+HINT : * Datatype of Stack is going to String (Name of Each Book is a String) *
+
+
+import java.util.*;
+class BookContainer{
+    int top = -1;  //Default top pointing below the Stack
+    int limit = 6;  //Static size of the Stack 
+    String Container[] = new String[limit]; //Static Stack declaration
+    void insertion(String book){//FUnction to insert values into Stack
+        if(top == limit-1)//Checking if Container is Full
+            System.out.println("\nBook Container is Full...🥲");
+        else
+        {
+            top++; //Increment top, then push value
+            Container[top] = book; 
+            System.out.println("\n new Book added into container : "+book);
+        }    
+    }
+    void removal()//Pop function to delete the top most element
+    {
+        if(top == -1)//Checking before deleting if empty
+            System.out.println("\nContainer is Empty..😔");
+        else{
+            System.out.println("\nBook removed from the container is : "+Container[top]);
+            top--; // If not empty, moving top to bottom 
+        }
+    }
+    void show() //function to see the top most element
+    {
+        if(top == -1) //Checking if it is  empty
+            System.out.println("\nContainer is Empty. Nothing to see.😔");
+        else
+             System.out.println("\nTop Most Book in Container is : "+Container[top]);
+    }
+    void showAllBooks()
+    {
+        if(top == -1) //Checking if it is  empty
+            System.out.println("\nContainer is Empty. Nothing to see.😔");
+        else{
+            System.out.println("\nBooks in Container are : ");
+            for(int i = top ; i >= 0 ; i--) //Display from top to bottom
+            {    
+                System.out.println("|.."+Container[top]+"..|"); // Access each top value
+                top--; //To see the next element, we should delete currrent one
+            }
+
+        }
+    } 
+    void isFull()
+    {
+        if(top == limit-1)
+            System.out.println("\nContainer is Full Currently...");
+        else
+            System.out.println("\nContainer is not at Full Capacity right now...");                
+    }
+    void isEmpty()
+    {
+        if(top == limit-1)
+            System.out.println("\nContainer is Empty Currently.....");
+        else
+            System.out.println("\nContainer is not Empty right now...");
+    }
+}
+public class BookContainerInLibrary {
+    public static void main(String avanthiIsGreat[])
+    {
+        BookContainer s = new BookContainer();
+        s.insertion("Java");
+        s.insertion("ADSA");
+        s.insertion("STACKS by YOU");
+        s.isFull();
+        s.isEmpty();
+        s.insertion("AVIH");
+        s.removal();
+        s.showAllBooks();
+    }
+}
+
+
+
+Queue code and functions : 
+
+
+class QueueCode{
+    int rear = -1; //Initial value of rear is beyond Queue
+    int front = 0; //Initial value of front is at the beginning
+    int size = 6;  // Max limit of the Queue
+    int Queue[] = new int[size]; 
+    void enQueue(int value) //Function to push elements into the Queue
+    {
+        if( rear == size-1 )// When Queue is full, rear is at limit
+            System.out.println("\n Queue is Full.... Cannot push more...");
+        else{
+            rear++; //Move rear to next place behind previous value
+            Queue[rear] = value; //Insert value behind the previous value
+            System.out.println("\n Value enQueued into the Queue : "+value);
+        }
+    }
+    void deQueue()//Function to remove elements from the Queue
+    {
+        if( front > rear)
+            System.out.println("\n Queue is empty, we cannot deQueue it...");
+        else
+        {
+            System.out.println("\n The element deQueued from Queue is : "+Queue[front]);
+            front++;
+        }
+    }
+    void peek(){
+        if(front > rear)
+            System.out.println("\n Queue is empty, we cannot see anything in it...🥲");
+        else
+        {
+            System.out.println("\n The element at the first in the Queue is : "+Queue[front]);
+            front++;
+        }
+    }
+    void display(){
+        if(front > rear)
+            System.out.println("\n Queue is empty, we cannot see anything in it...🥲");
+        else{
+            System.out.println("\n Values in the Queue are : \n");
+            for( int i = front ; i <= rear ; i++)
+            {
+                System.out.println(" | "+Queue[front]+" | ");
+                front++;
+            }
+        }            
+    }
+
+
+}
+public class QueueCodeSample {
+    public static void main(String alphabets[])
+        {
+            QueueCode q = new QueueCode();
+            q.enQueue(111);
+            q.enQueue(12654);
+            q.enQueue(65435);
+
+        }
+        
+}
+
+
+
+
+
+
+
+
+
+
+
+
+HomeWork / HouseWork / HostelWork / RoomWork : 
+
+Q1. Write a scenario based question for Queue as base code.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
