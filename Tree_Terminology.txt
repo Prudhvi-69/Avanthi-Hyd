@@ -1,0 +1,355 @@
+
+=======================================================================
+                     TREE TERMINOLOGY - COMPLETE GUIDE
+                         By SIR | 
+=======================================================================
+
+-----------------------------------------------------------------------
+1. BASIC TREE CONCEPTS
+-----------------------------------------------------------------------
+
+Tree        : A non-linear hierarchical data structure made of Nodes
+              connected by Edges.
+
+Node        : Each element in a tree that holds data.
+
+Edge        : The link/connection between two nodes.
+
+Root        : The topmost node of a tree. It has no parent.
+              Example: In Day6.java -> root = Node(106)
+
+Parent      : A node that has one or more child nodes.
+
+Child       : A node that comes below a parent node.
+
+Sibling     : Nodes that share the same parent.
+
+Leaf Node   : A node with NO children (also called External Node).
+
+Internal    
+Node        : A node with at least one child.
+
+Subtree     : A tree formed by a node and all its descendants.
+
+Degree      : Number of children a node has.
+              Degree of tree = maximum degree among all nodes.
+
+Depth       : Number of edges from Root to that node.
+              Root has depth = 0.
+
+Height      : Number of edges on the longest path from a node to a leaf.
+              Height of tree = height of root node.
+
+Level       : Level of root = 1. Level increases by 1 for each step down.
+
+Path        : Sequence of nodes and edges from one node to another.
+
+Ancestor    : Any node on the path from root to a given node.
+
+Descendant  : Any node reachable going downward from a given node.
+
+Forest      : A collection of disjoint trees.
+
+
+-----------------------------------------------------------------------
+2. BINARY TREE
+-----------------------------------------------------------------------
+
+Definition  : A tree where each node has AT MOST 2 children.
+              Called LEFT child and RIGHT child.
+
+              Example from Day6.java:
+                        106         <- Root
+                       /   \
+                      44    56      <- Left and Right children
+                           /
+                         999        <- Left child of 56
+
+Types of Binary Trees:
+-----------------------
+
+Full Binary     
+Tree        : Every node has either 0 or 2 children. No node has 1 child.
+
+Complete    
+Binary Tree : All levels are completely filled EXCEPT possibly the last,
+              and the last level has all nodes as far LEFT as possible.
+
+Perfect     
+Binary Tree : All internal nodes have exactly 2 children AND all leaf
+              nodes are at the same level.
+
+Degenerate  
+(Skewed)    
+Tree        : Every parent has only ONE child.
+              - Left Skewed  : all nodes go to the left
+              - Right Skewed : all nodes go to the right
+
+Balanced    
+Binary Tree : Height of left and right subtree of every node differs
+              by at most 1. (Example: AVL Tree)
+
+
+-----------------------------------------------------------------------
+3. BINARY TREE TRAVERSALS
+-----------------------------------------------------------------------
+
+Traversal means visiting every node exactly once.
+
+INORDER   (Left -> Root -> Right)
+          : Visits left subtree, then root, then right subtree.
+            For BST, gives SORTED (ascending) output.
+            
+            Day6.java output for inorder(106):
+            -> 44  106  999  56
+
+PREORDER  (Root -> Left -> Right)
+          : Visits root first, then left, then right subtree.
+            Used to COPY or SERIALIZE a tree.
+            
+            Day6.java output for preorder(106):
+            -> 106  44  56  999
+
+POSTORDER (Left -> Right -> Root)
+          : Visits left, then right, then root.
+            Used to DELETE a tree or evaluate expressions.
+            
+            Day6.java output for postorder(106):
+            -> 44  999  56  106
+
+LEVEL ORDER (BFS - Breadth First Search)
+          : Visit nodes level by level from top to bottom.
+            Uses a QUEUE data structure.
+            
+            Output: 106  44  56  999
+
+
+-----------------------------------------------------------------------
+4. BINARY SEARCH TREE (BST)
+-----------------------------------------------------------------------
+
+Definition  : A Binary Tree with the following property:
+              - Left child  < Parent Node
+              - Right child > Parent Node
+              - No duplicate values
+
+Example BST :
+                    50
+                   /  \
+                 30    70
+                / \   / \
+              20  40 60  80
+
+BST Operations:
+---------------
+
+Search      : Start at root. Go left if value < node, right if value > node.
+              Time: O(log n) average, O(n) worst case (skewed tree)
+
+Insert      : Follow BST property to find correct position and insert.
+
+Delete      : 3 cases:
+              Case 1 - Node is a Leaf        : Simply remove it.
+              Case 2 - Node has 1 child      : Replace node with its child.
+              Case 3 - Node has 2 children   : Replace with INORDER SUCCESSOR
+                                               (smallest node in right subtree)
+                                               or INORDER PREDECESSOR.
+
+Inorder of BST always gives SORTED output.
+
+
+-----------------------------------------------------------------------
+5. AVL TREE (Self-Balancing BST)
+-----------------------------------------------------------------------
+
+Definition  : A BST where the height difference (Balance Factor) between
+              left and right subtree of every node is at most 1.
+
+Balance     
+Factor      : BF = Height(Left Subtree) - Height(Right Subtree)
+              Valid values: -1, 0, +1
+
+Rotations   : Used to rebalance the tree after insert/delete.
+
+              LL Rotation : Single Right Rotation
+              RR Rotation : Single Left Rotation
+              LR Rotation : Left then Right Rotation
+              RL Rotation : Right then Left Rotation
+
+Advantage   : Guarantees O(log n) for search, insert, delete.
+
+
+-----------------------------------------------------------------------
+6. RED-BLACK TREE
+-----------------------------------------------------------------------
+
+Definition  : A self-balancing BST where each node has an extra color
+              attribute: RED or BLACK.
+
+Properties  :
+  1. Every node is Red or Black.
+  2. Root is always Black.
+  3. No two consecutive Red nodes (Red node cannot have Red child).
+  4. Every path from root to NULL has the same number of Black nodes.
+
+Used in     : Java's TreeMap and TreeSet internally use Red-Black Trees.
+
+
+-----------------------------------------------------------------------
+7. HEAP TREE
+-----------------------------------------------------------------------
+
+Definition  : A Complete Binary Tree that satisfies the Heap Property.
+
+Max Heap    : Parent node is GREATER than or equal to its children.
+              Root = Maximum element.
+
+Min Heap    : Parent node is LESS than or equal to its children.
+              Root = Minimum element.
+
+Used in     : Priority Queues, Heap Sort algorithm.
+
+Heap Sort   : O(n log n) time complexity.
+
+
+-----------------------------------------------------------------------
+8. B-TREE
+-----------------------------------------------------------------------
+
+Definition  : A self-balancing search tree where nodes can have MORE
+              than 2 children. Used in databases and file systems.
+
+Order m     : Each node can have at most m children and m-1 keys.
+
+Properties  :
+  - All leaves are at the same level.
+  - Minimizes disk I/O operations.
+
+Used in     : MySQL, file systems (NTFS, ext4).
+
+
+-----------------------------------------------------------------------
+9. B+ TREE
+-----------------------------------------------------------------------
+
+Definition  : Extension of B-Tree where ALL data is stored only in
+              LEAF nodes. Internal nodes store only keys for navigation.
+
+Advantage   : Leaf nodes are linked, making range queries very fast.
+
+Used in     : Database indexing (most common).
+
+
+-----------------------------------------------------------------------
+10. TRIE (Prefix Tree)
+-----------------------------------------------------------------------
+
+Definition  : A tree used to store STRINGS where each node represents
+              a character. Used for prefix-based searching.
+
+Used in     : Autocomplete, spell checkers, IP routing.
+
+Example     : Storing "cat", "car", "dog"
+              root -> c -> a -> t (end)
+                               r (end)
+                    -> d -> o -> g (end)
+
+
+-----------------------------------------------------------------------
+11. SEGMENT TREE
+-----------------------------------------------------------------------
+
+Definition  : A tree used for storing intervals or segments. Allows
+              efficient range queries and point updates.
+
+Used in     : Range sum query, Range minimum query.
+Time        : O(log n) for query and update.
+
+
+-----------------------------------------------------------------------
+12. FENWICK TREE (Binary Indexed Tree - BIT)
+-----------------------------------------------------------------------
+
+Definition  : A tree structure used to efficiently compute prefix sums
+              and update values.
+
+Time        : O(log n) for both query and update.
+Space       : O(n)
+
+
+-----------------------------------------------------------------------
+13. EXPRESSION TREE
+-----------------------------------------------------------------------
+
+Definition  : A Binary Tree used to represent arithmetic expressions.
+              - Leaf nodes = Operands (numbers/variables)
+              - Internal nodes = Operators (+, -, *, /)
+
+Example     : Expression: (3 + 5) * 2
+                    *
+                   / \
+                  +   2
+                 / \
+                3   5
+
+Inorder traversal  -> gives INFIX expression
+Preorder traversal -> gives PREFIX expression
+Postorder traversal-> gives POSTFIX expression
+
+
+-----------------------------------------------------------------------
+14. SPANNING TREE
+-----------------------------------------------------------------------
+
+Definition  : A subgraph of a graph that includes ALL vertices with
+              minimum number of edges and NO cycles.
+
+Minimum     
+Spanning    
+Tree (MST)  : Spanning tree with minimum total edge weight.
+              Algorithms: Kruskal's, Prim's
+
+
+-----------------------------------------------------------------------
+15. GENERAL TREE
+-----------------------------------------------------------------------
+
+Definition  : A tree where a node can have ANY number of children
+              (no restriction like binary tree).
+
+Representation: Can be converted to Binary Tree using
+                Left-Child Right-Sibling representation.
+
+
+-----------------------------------------------------------------------
+QUICK REFERENCE - TIME COMPLEXITIES
+-----------------------------------------------------------------------
+
+Operation       BST(avg)  BST(worst)  AVL      Heap
+-----------     --------  ----------  -------  -------
+Search          O(log n)  O(n)        O(log n) O(n)
+Insert          O(log n)  O(n)        O(log n) O(log n)
+Delete          O(log n)  O(n)        O(log n) O(log n)
+Min/Max         O(log n)  O(n)        O(log n) O(1)
+
+
+-----------------------------------------------------------------------
+QUICK REFERENCE - TREE TYPES SUMMARY
+-----------------------------------------------------------------------
+
+Binary Tree         : Max 2 children per node
+BST                 : Binary Tree + Left < Root < Right
+AVL Tree            : BST + Balanced (BF = -1, 0, 1)
+Red-Black Tree      : BST + Color property for balance
+Heap                : Complete BT + Heap property (Max or Min)
+B-Tree              : Multi-way balanced search tree
+B+ Tree             : B-Tree with data only at leaves
+Trie                : String storage using characters
+Segment Tree        : Range queries on arrays
+Fenwick Tree        : Prefix sum queries
+Expression Tree     : Arithmetic expression representation
+General Tree        : Unlimited children per node
+
+=======================================================================
+                    END OF TREE TERMINOLOGY DOCUMENT
+=======================================================================

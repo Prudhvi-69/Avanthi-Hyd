@@ -58,9 +58,12 @@ class  Day6{
 			tree.root.left = new Node(44);
 			tree.root.right = new Node(56);
 			tree.root.right.left = new Node(999);
-
+            
+            System.out.println("\nInorder Traversal of the tree is : ");
 			tree.inorder(tree.root);
+            System.out.println("\nPreorder Traversal of the tree is : ");
 			tree.preorder(tree.root);
+            System.out.println("\nPostorder Traversal of the tree is : ");
 			tree.postorder(tree.root);
 
 		}
