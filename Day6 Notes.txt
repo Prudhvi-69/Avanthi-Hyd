@@ -1,0 +1,153 @@
+Tree (🌴🌳) : Tree is a Non-Linear Data Structure, where there is a concept of Main Node at the top level called : Root Node, which is known as the Parent of all nodes in the Tree. 
+-> From the root node, there exists all the children of the tree. 
+-> In the concept Trees, any node at any level in the Tree, can have any number of child nodes.
+-> Depending on the number of child nodes, we can distinguish between mutliple types of Trees.
+-> One of the most used and implemented type of Tree is : Binary Tree.
+
+Binary Tree🌲:  Unlike any tree which can have multiple number of nodes in it, but Binary Tree will always have atmost 2 child nodes for any node.
+
+** It is not exactly 2 nodes everytime, it is maximum should be 2 nodes everytime, it can be a single node or no nodes at all.
+
+** There will be different types of categories in Binary Tree depending on the number of nodes present in the Tree. 
+
+** In Java, when you want to create a Tree, we should be using a class with the name as Node and define a variable to hold the data inside the node and left and right subtrees as null or empty objects. 
+
+** Unlike an Array or Stack or Queue, in Binary Trees, we have 3 different ways of accessing the elements in the Tree.
+
+** Those 3 ways are : Preorder traversal, Postorder Traversal and Inorder Traversal.
+
+Preorder Traversal : Accessing the root value first, then going to the left subtree and then going to the right subtree.
+
+Postorder Traversal : Accessing the left subtree first, then going to right subtree and finally accessing the root value. 
+
+Inorder Traversal : Accessing the left subtree first, then accessing the ROOT value and finally accessing  the right subtree at last.  
+
+LevelOrder Traversal : Accessing the nodes based on their levels in the Binary Tree, i.e., Root Node present  at the level 0, and the immediate child nodes of the root node will be at the level 1 and so on for each child node levels. 
+
+-> The deeper we go in a Binary Tree, the more levels will be present in increasing order. Starting from Root at the level 0.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class  BinaryTree{  
+	class Node{
+		int  data;
+		Node right;
+		Node left;
+	
+		Node( int  value )
+		{
+			this.data = value;
+			right = null;
+			left = null;
+		} 
+	}
+		Node root;
+		
+		void preorder( Node node) 
+		{ 
+			if( node == null ) 
+				return;
+			else
+			{ 
+				System.out.print(" "+node.data);
+				preorder( node.left ); 
+				preorder( node.right );
+			}
+		}
+
+
+ 		void inorder( Node node) 
+		{ 
+			if( node == null ) 
+				return;
+			else
+			{ 
+				inorder( node.left ); 
+				System.out.print(" "+node.data);		
+				inorder( node.right );
+			}
+		}
+
+		void postorder( Node node) 
+		{ 
+			if( node == null ) 
+				return;
+			else
+			{ 
+				postorder( node.left ); 
+				postorder( node.right );
+		System.out.print(" "+node.data);
+			}
+		}
+
+		public static void main(String avanthi[])
+		{
+			BinaryTree tree = new BinaryTree();
+			
+			tree.root = new Node(106);
+			tree.root.left = new Node(44);
+			tree.root.right = new Node(56);
+			tree.root.right.left = new Node(999);
+
+			tree.inorder(root);
+			tree.preorder(root);
+			tree.postorder(root);
+
+		}
+} 
+
+
+		
+
+
+
+
+
+
+
+link😏 : tinyurl.com/AVIH-day6 
+
+open this link and fill it  
+
+
+
+once this is finished, I WANT YOU ALL TO TAKE A PAPER AND WRITE ABOUT OUR 5 DAYS and give it to me
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sliding Window Approach 
+
+
+Strivers Sheet link : https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z 
+
+
+
+
+
+

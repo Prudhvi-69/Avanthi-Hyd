@@ -1,0 +1,18 @@
+Important Links: 
+
+
+Strivers Sheet for DSA : https://takeuforward.org/dsa/strivers-a2z-sheet-learn-dsa-a-to-z
+
+
+Web Applications : 
+
+Java Full Stack 
+Python Full Stack 
+MERN Stack : MongoDB ExpressJS ReactJS NodeJS
+MEAN Stack : MongoDB ExpressJS AngularJS NodeJS
+
+
+
+Learn Graphic Desgining : Figma 
+ 
+Reference : Youtube : Figma Basic Tutorials 
